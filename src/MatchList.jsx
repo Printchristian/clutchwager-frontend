@@ -5,9 +5,13 @@ export default function MatchList() {
 
   useEffect(() => {
     async function fetchMatches() {
-      const res = await fetch("http://localhost:3000/matches");
-      const data = await res.json();
-      setMatches(data);
+      try {
+        const res = await fetch("http://localhost:3000/matches");
+        const data = await res.json();
+        setMatches(data);
+      } catch (err) {
+        console.error("Error fetching matches:", err);
+      }
     }
 
     fetchMatches();
