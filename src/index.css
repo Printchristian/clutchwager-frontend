@@ -1,0 +1,77 @@
+/* Global Gamer Theme */
+body {
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #00ffff;
+}
+
+button {
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  box-shadow: 0 0 20px #00ffff;
+}
+
+input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  margin-top: 5px;
+  background: #222;
+  color: white;
+}
+
+/* Navbar Styles */
+#navbar {
+  background: #242424;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar nav {
+  display: flex;
+  align-items: center;
+}
+
+#navbar a, #navbar button {
+  margin-left: 15px;
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#navbar a:hover, #navbar button:hover {
+  color: #ff00ff;
+}
+
+/* Optional Video Background Styling */
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0.50;
+}

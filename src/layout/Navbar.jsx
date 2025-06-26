@@ -1,17 +1,21 @@
-import { NavLink } from "react-router";
-
+import { NavLink } from "react-router-dom";
 import { useAuth } from "../auth/AuthContext";
 
 export default function Navbar() {
   const { token, logout } = useAuth();
+
   return (
     <header id="navbar">
       <NavLink id="brand" to="/">
-        <p>Frontend Template</p>
+        <h1>ClutchWager</h1>
       </NavLink>
+
       <nav>
         {token ? (
-          <button onClick={logout}>Log out</button>
+          <>
+            <NavLink to="/profile">Profile</NavLink>
+            <button onClick={logout}>Log out</button>
+          </>
         ) : (
           <NavLink to="/login">Log in</NavLink>
         )}

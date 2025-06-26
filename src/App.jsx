@@ -3,15 +3,19 @@ import Layout from "./layout/Layout";
 import Login from "./auth/Login";
 import Register from "./auth/Register";
 import MatchList from "./MatchList";
+import MatchForm from "./MatchForm";
+import Profile from "./auth/Profile";
 
 export default function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route index element={<MatchList />} />
         <Route path="/matches" element={<MatchList />} />
+        <Route path="/submit" element={<MatchForm />} />
+        <Route index element={<p>Home page</p>} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
       </Route>
     </Routes>
   );
